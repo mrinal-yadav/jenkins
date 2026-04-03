@@ -25,5 +25,13 @@ pipeline {
                 sh 'npm test'
             }
         }
+        
+        stage('Deploy Simulation') {
+            steps {
+                sh '''
+                    echo "Deployment simulation complete: build copied to staging folder."
+                '''
+            }
+        }
     }
 }
